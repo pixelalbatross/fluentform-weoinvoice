@@ -1,0 +1,29 @@
+{
+  "name": "fluentform-weoinvoice",
+  "version": "1.0.0",
+  "description": "Issues a WeoInvoice fiscal document when a Fluent Forms payment completes, by posting an order-agnostic invoice payload to WeoInvoice.",
+  "contributors": [
+    {
+      "name": "Sérgio Santos",
+      "homepage": "https://s3rgiosan.dev"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixelalbatross/fluentform-weoinvoice"
+  },
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "wp-env": "wp-env",
+    "wp-env:clean": "wp-env clean all",
+    "test:setup": "npm run wp-env start",
+    "test:unit": "wp-env run tests-cli --env-cwd='wp-content/plugins/fluentform-weoinvoice' vendor/bin/phpunit --testsuite=default"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^10.39.0"
+  }
+}
